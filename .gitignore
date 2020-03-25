@@ -5,3 +5,4 @@ env/
 sandbox/static/CACHE/
 sandbox/sandbox/__pycache__/
 *__pycache__/
+github_token
