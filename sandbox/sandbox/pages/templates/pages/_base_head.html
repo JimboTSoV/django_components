@@ -1,0 +1,23 @@
+{% load static %}
+{% load compress %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{page.name}}</title>
+
+    <link href="{% static 'pages/fontawesome/css/all.css' %}" rel="stylesheet">
+    {% compress css %}
+    <link type="text/x-scss" rel="stylesheet" href="{% static 'pages/main.scss' %}">
+    {% endcompress %}
+    <script src="{% static 'pages/main.js' %}"></script>
+
+    {# comment this out and use your own styles #}
+    {% comment %}
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    {% endcomment %}
+</head>

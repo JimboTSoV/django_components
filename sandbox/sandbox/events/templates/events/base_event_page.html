@@ -1,0 +1,42 @@
+{% load placeholders %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "pages/base_head.html" %}
+</head>
+<body>
+  <main class="container">
+      <div class="row">
+          <!-- left -->
+          <section class="col-4">
+            {# Verbose #}
+            {% placeholder page "base_page.main_content" as components %}
+            {% for component in components %}
+              {{component.render}}
+            {% endfor %}
+
+            {# Implicit #}
+            {% render_placeholder page "base_page.main_content" as components %}
+            {% for component in components %}
+              {{component}}
+            {% endfor %}
+          </section>
+
+          <!-- right -->
+          <aside class="col-8">
+              {% placeholder page "base_page.right_content" as components %}
+              {% for component in components %}
+                 {{component.render}}
+              {% endfor %}
+
+              {# Implicit #}
+              {% render_placeholder page "base_page.right_content" as components %}
+              {% for component in components %}
+                {{component.next}}
+               {% endfor %}
+          </aside>
+      </div>
+  </main>
+</body>
+</html>

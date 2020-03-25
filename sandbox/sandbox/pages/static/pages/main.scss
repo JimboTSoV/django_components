@@ -1,0 +1,150 @@
+$color-white: white;
+$color-lightest : white;
+$color-lighter : #b3cde0;
+$color-light : #6497b1;
+
+$color-dark: #035b96;
+$color-darker: #04396c;
+$color-darkest: #031f4b;
+
+body, html {
+    margin: 0;
+}
+
+.general-page-editor {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+    * {
+        box-sizing: border-box;
+    }
+
+    .page-editor-row {
+
+        &:after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+
+        .one-col, .two-col, .three-col, .four-col,
+        .five-col, .six-col, .seven-col, .eight-col,
+        .nine-col, .ten-col, .eleven-col, .twelve-col {
+            display: inline-block;
+            float: left;
+        }
+
+        .twelve-col{width: 100%;}
+        .eleven-col{width: 91.66%;}
+        .ten-col{width: 83.33%;}
+        .nine-col{width: 75%;}
+        .eight-col{width: 66.66%;}
+        .seven-col{width: 58.33%;}
+        .six-col{width: 50%;}
+        .five-col{width: 41.66%;}
+        .four-col{width: 33.33%;}
+        .three-col{width: 25%;}
+        .two-col{width: 16.66%;}
+        .one-col{width: 8.33%;}
+
+    }
+
+    header{
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 100;
+            margin: 0 0 10px 0;
+            padding: 0 0 5px 0;
+            border-bottom: 1px solid $color-light;
+        }
+    }
+
+    .label {
+        background-color: $color-darkest;
+        color: $color-lightest;
+        padding: 5px 15px;
+        font-style: italic;
+        margin: 0;
+
+        &.label-top {
+           border-radius: 5px 15px 0 0;
+        }
+
+        &.label-bottom {
+           border-radius: 0px 0px 15px 5px;
+        }
+    }
+
+    form {
+        .page-edit-form-group {
+
+            padding: 5px;
+
+            & > * {
+                display: block;
+                width: 100%;
+            }
+
+            & > .label {
+                font-size: 0.9em;
+                display: inline-block;
+                width: unset;
+            }
+
+            input, select, button {
+                padding: 5px;
+                font-size: 1em;
+                box-sizing: border-box;
+                border-radius: 0px 5px 5px 5px;
+            }
+
+            .save {
+                border: 1px solid $color-dark;
+                background-color: $color-darkest;
+                color: $color-lightest;
+                border-radius: 5px;
+                cursor: pointer;
+                float: right;
+                width: unset;
+                padding: 10px;
+            }
+
+        }
+    }
+
+     &.edit-wrapper{
+
+        border: 1px solid $color-light;
+
+        .placeholder-name{
+
+            .label {
+                display: inline-block;
+            }
+
+            .add-component-button{
+                display: inline-block;
+                float: right;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                margin: 0;
+                padding: 0;
+                i {
+                    font-size: 2em;
+                    color: $color-darkest;
+                }
+            }
+        }
+
+     }
+
+    &.page-edit-details {
+        padding: 20px 10%;
+
+        color: $color-lightest;
+        background-color: $color-dark;
+    }
+
+}
+
+

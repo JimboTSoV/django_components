@@ -1,0 +1,7 @@
+env.ps1
+start_server.ps1
+start_shell.ps1
+env/
+sandbox/static/CACHE/
+sandbox/sandbox/__pycache__/
+*__pycache__/

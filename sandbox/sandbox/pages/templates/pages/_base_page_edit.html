@@ -1,0 +1,35 @@
+{% load i18n %}
+
+<div class="general-page-editor page-edit-details">
+
+    <header>
+        <h3>Edit page: <em>{{page.name}}</em></h3>
+    </header>
+
+    <form method="post">
+       {% csrf_token %}
+
+        <div class="page-editor-row">
+
+            <div class="page-edit-form-group five-col">
+                {{ form.name.errors }}
+                <label class="label label-top" for="{{ form.name.id_for_label }}">{{form.name.label}}</label>
+                {{form.name}}
+            </div>
+
+            <div class="page-edit-form-group five-col">
+                {{ form.page_type.errors }}
+                <label class="label label-top" for="{{ form.page_type.id_for_label }}">{{form.page_type.label}}</label>
+                {{form.page_type}}
+            </div>
+
+            <div class="page-edit-form-group two-col">
+                <button class="save" type="submit">{% trans 'Save' %}</button>
+            </div>
+
+        </div>
+
+    </form>
+
+    {{ form.non_field_errors }}
+</div>
