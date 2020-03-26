@@ -6,3 +6,5 @@ sandbox/static/CACHE/
 sandbox/sandbox/__pycache__/
 *__pycache__/
 github_token
+sandbox/.idea/workspace.xml
+sandbox/.idea/.gitignore
